@@ -2,7 +2,7 @@ FROM python:3.8.1-buster
 ARG user=0
 ARG token
 ARG prefix
-RUN apt-get update && apt-get install -y default-jre-headless
+RUN apt-get update && apt-get install -y openjdk-11-jre-headless
 RUN python3.8 -m pip install -U pip setuptools wheel --no-cache-dir
 RUN python3.8 -m pip install -U Red-DiscordBot --no-cache-dir
 RUN mkdir /.config /red_setup_logs /app && \
